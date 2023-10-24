@@ -1,0 +1,28 @@
+create database BusBooking;
+use BusBooking;
+
+create table signup(username varchar(50) primary key,
+password varchar(50),
+contact_no varchar(15),
+gender varchar(20),
+email varchar(50),
+address varchar(50));
+
+create table addroutes(bus_id int primary key,
+bus_name varchar(50),
+source varchar(60),
+destination varchar(60),
+bus_fare varchar(20),
+seating_capacity int,
+visiting_stops varchar(200));
+
+create table booking(booking_id int, bus_id int,
+username varchar(50),
+booking_date date,
+travel_date date,
+num_seats int,
+amount double,
+status varchar(30));
+
+
+

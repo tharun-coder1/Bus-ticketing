@@ -1,0 +1,118 @@
+{% load static %}
+<html>
+<head>
+<title>Online Bus Ticketing Application</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script language="javascript">
+	function validate(formObj)
+	{
+	if(formObj.t1.value.length==0)
+	{
+	alert("Please Enter Bus name");
+	formObj.t1.focus();
+	return false;
+	}
+	if(formObj.t2.value.length==0)
+	{
+	alert("Please Enter Source Place");
+	formObj.t2.focus();
+	return false;
+	}
+	
+	if(formObj.t3.value.length==0)
+	{
+	alert("Please Enter Destination Place");
+	formObj.t3.focus();
+	return false;
+	}
+	
+	if(formObj.t4.value.length==0)
+	{
+	alert("Please Enter Bus Fare");
+	formObj.t4.focus();
+	return false;
+	}
+	
+	if(formObj.t5.value.length==0)
+	{
+	alert("Please Enter Seating Capacity");
+	formObj.t5.focus();
+	return false;
+	}
+	if(isNaN(formObj.t5.value)){
+		alert("Seating Capacity value must be numeric");
+		formObj.t5.focus();
+		return false;
+	}
+	if(formObj.t6.value.length==0)
+	{
+	alert("Please Enter Visiting Places");
+	formObj.t6.focus();
+	return false;
+	}
+	return true;
+	}
+	</script>
+	 <script language="javascript" type="text/javascript" src="datetimepicker.js">
+</script>
+</head>
+<body>
+<div class="main">
+  <div class="main_resize">
+    <div class="header">
+      <div class="logo">
+        <h1><span>Bus Ticketing Application</span></h1>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content_bg">
+        <div class="menu_nav">
+        <ul>
+      
+      <li><a href="{% url 'AddRoutes' %}">Add New Bus Routes</a></li>
+	  <li><a href="{% url 'ViewBookings' %}">View Bookings</a></li>
+	  <li><a href="{% url 'index' %}">Logout</a></li>
+   </ul>
+        </div>
+        <div class="hbg"><img src="{% static 'images/header_images.jpg' %}" width="915" height="286" alt="" /></div>
+      				<center>
+<form name="f1" method="post" action={% url 'AddRoutesAction' %} onsubmit="return validate(this);">
+{% csrf_token %}<br/>
+   <h2><b>Add New Routes Screen</b></h2>
+   
+	<font size="" color="green"><center>{{ data|safe }}</center></font>
+						
+			<table align="center" width="30%" >
+					<tr><td><font size='' color="black">Bus&nbsp;Name</b></td>
+					<td><input type="text" name="t1"  size="40"></td></tr>
+
+					<tr><td><font size='' color="black">Source&nbsp;Place</b></td>
+					<td><input name="t2" type="text" size="40"></td></tr>
+
+					<tr><td><font size='' color="black">Destination&nbsp;Place</b></td>
+					<td><input name="t3" type="text" size="40"></td></td></tr>
+
+					<tr><td><font size='' color="black">Bus&nbsp;Fare</b></td>
+					<td><input type="text" name="t4"  size="40"/></td></tr>
+
+					<tr><td><font size='' color="black">Seating&nbsp;Capacity</b></td>
+					<td><input name="t5" type="text" size="40"></td></td></tr>
+
+					<tr><td><font size='' color="black">Visiting&nbsp;Stops</b></td>
+					<td><input name="t6" type="text" size="40"></td></td></tr>
+
+					<tr><td></td>
+					<td><input type="submit" value="Submit"></td>
+			</table>
+				</div>	
+					
+				</div>
+				
+					
+	</body>
+</html>
