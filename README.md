@@ -12,6 +12,6 @@
 
 * Create a folder using command "mkdir" and navigate into the directory
 * Now create a virtual environment with command "python -m venv myenv" and activate it using "myenv\Scripts\activate"
-* Now install the Django and any required dependencies and create a new project with command "django-admin startproject yourprojectname"
-* Make changes to the project folder, build the application and finally run the command "py manage.py runserver" to start the server
+* Now install the Django and any required dependencies and add BusBookingApp to the root folder of Django
+* Navigate into the BusBookingApp folder and finally run the command "py manage.py runserver" to start the server
 * Navigate to localhost:8000/ to find your application homepage
