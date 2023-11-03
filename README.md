@@ -15,3 +15,25 @@
 * Now install the Django and any required dependencies and add BusBookingApp to the root folder of Django
 * Navigate into the BusBookingApp folder and finally run the command "py manage.py runserver" to start the server
 * Navigate to localhost:8000/ to find your application homepage
+
+## Screenshots
+
+* Home View
+
+![Home](./img/home.png).
+
+* User login
+
+![Userlogin](./img/userlogin.png).
+
+* User Bookings
+
+![User Bookings](./img/bookings.png).
+
+* Admin login
+
+![Admin login](./img/adminlogin.png).
+
+* Admin Adding new routes
+
+![Admin login](./img/addingnewroutes.png).
