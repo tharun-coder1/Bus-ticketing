@@ -21,19 +21,23 @@
 * Home View
 
 ![Home](./img/home.png).
+(-----)
 
 * User login
 
 ![Userlogin](./img/userlogin.png).
 
+(-----)
 * User Bookings
 
 ![User Bookings](./img/bookings.png).
 
+(-----)
 * Admin login
 
 ![Admin login](./img/adminlogin.png).
 
+(-----)
 * Admin Adding new routes
 
 ![Admin login](./img/addingnewroutes.png).
